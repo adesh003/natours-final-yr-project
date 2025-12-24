@@ -1,0 +1,471 @@
+
+[
+  {
+    "startLocation": {
+      "description": "Port Blair, Andaman & Nicobar Islands",
+      "type": "Point",
+      "coordinates": [92.7163, 11.6234],
+      "address": "Cellular Jail, Atlanta Point, Port Blair, Andaman and Nicobar Islands 744104, India"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 15,
+    "images": ["tour-2-1.jpg", "tour-2-2.jpg", "tour-2-3.jpg"],
+    "startDates": [
+      "2025-11-20T09:00:00.000Z",
+      "2025-12-18T09:00:00.000Z",
+      "2026-01-22T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c2955",
+    "name": "The Andaman Explorer",
+    "duration": 7,
+    "maxGroupSize": 15,
+    "difficulty": "medium",
+    "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a1f4e2f8fb814b56fa185"],
+    "price": 45000,
+    "summary": "Exploring the pristine beaches and turquoise waters of the Andaman Islands",
+    "description": "Embark on an unforgettable journey to the Andaman Islands, a tropical paradise in the Bay of Bengal. Discover breathtaking coral reefs, indulge in thrilling water sports, and relax on world-renowned beaches. This tour offers a perfect blend of adventure and serenity, from the historical Cellular Jail in Port Blair to the stunning natural beauty of Havelock and Neil Islands. Experience the unique culture and delectable seafood of this Indian archipelago.",
+    "imageCover": "andaman-islands-cover.jpg",
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2959",
+        "description": "Radhanagar Beach, Havelock Island",
+        "type": "Point",
+        "coordinates": [92.9424, 11.9796],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2958",
+        "description": "Bharatpur Beach, Neil Island",
+        "type": "Point",
+        "coordinates": [92.9223, 11.8282],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2957",
+        "description": "Limestone Caves, Baratang Island",
+        "type": "Point",
+        "coordinates": [92.7936, 12.1643],
+        "day": 5
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2956",
+        "description": "Ross Island",
+        "type": "Point",
+        "coordinates": [92.7633, 11.6742],
+        "day": 7
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Manali, Himachal Pradesh",
+      "type": "Point",
+      "coordinates": [77.1887, 32.2432],
+      "address": "Mall Road, Siyal, Manali, Himachal Pradesh 175131, India"
+    },
+    "ratingsAverage": 5,
+    "ratingsQuantity": 25,
+    "images": ["tour-1-1.jpg", "tour-1-2.jpg", "tour-1-3.jpg"],
+    "startDates": [
+      "2025-05-15T09:00:00.000Z",
+      "2025-06-20T09:00:00.000Z",
+      "2025-09-10T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c2951",
+    "name": "The Himalayan Hiker",
+    "duration": 5,
+    "maxGroupSize": 25,
+    "difficulty": "easy",
+    "guides": [
+      "5c8a21d02f8fb814b56fa189",
+      "5c8a201e2f8fb814b56fa186",
+      "5c8a1f292f8fb814b56fa184"
+    ],
+    "price": 25000,
+    "summary": "Breathtaking hike through the serene valleys of Himachal Pradesh",
+    "description": "Escape to the majestic Himalayas on this refreshing hiking tour. Starting from the charming town of Manali, we will trek through lush green meadows, dense pine forests, and picturesque villages. Enjoy stunning views of snow-capped peaks, breathe in the crisp mountain air, and experience the warm hospitality of the local communities. This tour is perfect for nature lovers and those seeking a peaceful retreat in the lap of the Himalayas.",
+    "imageCover": "himalayan-hiker-cover.jpg",
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2954",
+        "description": "Solang Valley",
+        "type": "Point",
+        "coordinates": [77.1574, 32.3149],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2953",
+        "description": "Parvati Valley, Kasol",
+        "type": "Point",
+        "coordinates": [77.3153, 32.0104],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2952",
+        "description": "Triund, McLeod Ganj",
+        "type": "Point",
+        "coordinates": [76.3503, 32.2530],
+        "day": 5
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Srinagar, Jammu & Kashmir",
+      "type": "Point",
+      "coordinates": [74.8260, 34.0837],
+      "address": "Dal Lake, Srinagar, Jammu and Kashmir 190001, India"
+    },
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 10,
+    "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
+    "startDates": [
+      "2026-01-10T10:00:00.000Z",
+      "2026-02-15T10:00:00.000Z",
+      "2027-01-12T10:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c295a",
+    "name": "The Kashmir Snow Adventurer",
+    "duration": 4,
+    "maxGroupSize": 10,
+    "difficulty": "difficult",
+    "guides": [
+      "5c8a21d02f8fb814b56fa189",
+      "5c8a23412f8fb814b56fa18c",
+      "5c8a1f4e2f8fb814b56fa185"
+    ],
+    "price": 55000,
+    "summary": "Exciting adventure in the snow with skiing and snowboarding in Gulmarg",
+    "description": "Experience the thrill of a lifetime in the powdery snow of Gulmarg, the premier ski resort of India. This tour is designed for winter sports enthusiasts, offering world-class skiing and snowboarding opportunities on the slopes of the Pir Panjal range. Ride the famous Gulmarg Gondola, one of the highest in the world, and enjoy breathtaking views of the snow-covered Himalayas. Whether you are a beginner or an expert, Gulmarg promises an unforgettable snow adventure.",
+    "imageCover": "kashmir-snow-adventure-cover.jpg",
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c295c",
+        "description": "Gulmarg Ski Resort",
+        "type": "Point",
+        "coordinates": [74.3831, 34.0494],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c295b",
+        "description": "Apharwat Peak",
+        "type": "Point",
+        "coordinates": [74.3418, 34.0253],
+        "day": 2
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Jaipur, Rajasthan",
+      "type": "Point",
+      "coordinates": [75.7873, 26.9124],
+      "address": "Hawa Mahal, Hawa Mahal Rd, Badi Choupad, J.D.A. Market, Pink City, Jaipur, Rajasthan 302002, India"
+    },
+    "ratingsAverage": 4.9,
+    "ratingsQuantity": 18,
+    "images": ["tour-5-1.jpg", "tour-5-2.jpg", "tour-5-3.jpg"],
+    "startDates": [
+      "2025-10-25T09:00:00.000Z",
+      "2026-02-18T10:00:00.000Z",
+      "2026-11-15T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c2961",
+    "name": "The Rajasthan Desert Camper",
+    "duration": 10,
+    "maxGroupSize": 15,
+    "difficulty": "medium",
+    "guides": [
+      "5c8a21f22f8fb814b56fa18a",
+      "5c8a23412f8fb814b56fa18c",
+      "5c8a201e2f8fb814b56fa186"
+    ],
+    "price": 65000,
+    "summary": "Experiencing the royal heritage and desert landscapes of Rajasthan",
+    "description": "Embark on a majestic journey through the land of kings, Rajasthan. Explore magnificent forts, opulent palaces, and vibrant markets. This tour takes you through the heart of Rajasthan, from the pink city of Jaipur to the golden sands of the Thar Desert in Jaisalmer. Enjoy a camel safari at sunset, camp under the starlit desert sky, and immerse yourself in the rich culture and traditions of this incredible state.",
+    "imageCover": "rajasthan-desert-camper-cover.jpg",
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2965",
+        "description": "Mehrangarh Fort, Jodhpur",
+        "type": "Point",
+        "coordinates": [73.0188, 26.2979],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2964",
+        "description": "Sam Sand Dunes, Jaisalmer",
+        "type": "Point",
+        "coordinates": [70.5015, 26.8617],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2963",
+        "description": "City Palace, Udaipur",
+        "type": "Point",
+        "coordinates": [73.6834, 24.5765],
+        "day": 7
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2962",
+        "description": "Pushkar Lake, Pushkar",
+        "type": "Point",
+        "coordinates": [74.5539, 26.4868],
+        "day": 9
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "New Delhi, Delhi",
+      "type": "Point",
+      "coordinates": [77.2167, 28.6139],
+      "address": "India Gate, Rajpath, India Gate, New Delhi, Delhi 110001, India"
+    },
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 22,
+    "images": ["tour-4-1.jpg", "tour-4-2.jpg", "tour-4-3.jpg"],
+    "startDates": [
+      "2025-10-10T10:00:00.000Z",
+      "2026-02-05T09:00:00.000Z",
+      "2026-03-15T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c295d",
+    "name": "The Golden Triangle Wanderer",
+    "duration": 9,
+    "maxGroupSize": 20,
+    "difficulty": "easy",
+    "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a201e2f8fb814b56fa186"],
+    "price": 50000,
+    "summary": "Living the life of Wanderlust in India's most beautiful cities",
+    "description": "Discover the heart of India on the classic Golden Triangle tour. This journey takes you through the bustling capital of Delhi, the city of the iconic Taj Mahal, Agra, and the vibrant pink city of Jaipur. Witness the perfect blend of history, culture, and architecture as you explore ancient monuments, magnificent forts, and bustling bazaars. This tour offers a quintessential Indian experience, creating memories that will last a lifetime.",
+    "imageCover": "golden-triangle-cover.jpg",
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2960",
+        "description": "Humayun's Tomb, New Delhi",
+        "type": "Point",
+        "coordinates": [77.2507, 28.5933],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c295f",
+        "description": "Taj Mahal, Agra",
+        "type": "Point",
+        "coordinates": [78.0421, 27.1751],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c295e",
+        "description": "Amber Fort, Jaipur",
+        "type": "Point",
+        "coordinates": [75.8513, 26.9855],
+        "day": 7
+      }
+    ]
+  },
+    {
+    "startLocation": {
+      "description": "Rishikesh, Uttarakhand",
+      "type": "Point",
+      "coordinates": [78.2676, 30.0869],
+      "address": "Laxman Jhula, Rishikesh, Uttarakhand 249302, India"
+    },
+    "ratingsAverage": 4.6,
+    "ratingsQuantity": 18,
+    "images": ["tour-6-1.jpg", "tour-6-2.jpg", "tour-6-3.jpg"],
+    "startDates": [
+      "2025-04-10T09:00:00.000Z",
+      "2025-05-20T09:00:00.000Z",
+      "2025-10-15T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c2966",
+    "name": "The Rishikesh Adventure Lover",
+    "duration": 14,
+    "maxGroupSize": 8,
+    "difficulty": "difficult",
+    "guides": [
+      "5c8a21f22f8fb814b56fa18a",
+      "5c8a1f292f8fb814b56fa184",
+      "5c8a1f4e2f8fb814b56fa185"
+    ],
+    "price": 75000,
+    "summary": "White-water rafting, bungee jumping, trekking and more, all in one tour",
+    "description": "Get your adrenaline pumping in the adventure capital of India, Rishikesh. This tour is packed with thrilling activities, from navigating the rapids of the holy Ganges on a raft to taking a leap of faith with bungee jumping. We will also explore the surrounding Himalayan foothills on exciting treks, camp by the riverside under the stars, and experience the spiritual vibe of this unique town. This is the ultimate adventure tour for thrill-seekers.",
+    "imageCover": "rishikesh-adventure-cover.jpg",
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c296b",
+        "description": "Shivpuri Rafting Point",
+        "type": "Point",
+        "coordinates": [78.3312, 30.1337],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296a",
+        "description": "Jumpin Heights Bungee Jumping",
+        "type": "Point",
+        "coordinates": [78.3697, 30.1345],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2969",
+        "description": "Neer Garh Waterfall Trek",
+        "type": "Point",
+        "coordinates": [78.3094, 30.1171],
+        "day": 6
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2968",
+        "description": "Kunjapuri Temple Sunrise Trek",
+        "type": "Point",
+        "coordinates": [78.3308, 30.1793],
+        "day": 9
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2967",
+        "description": "Vashishta Gufa (Cave)",
+        "type": "Point",
+        "coordinates": [78.4357, 30.0890],
+        "day": 12
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Kaza, Spiti Valley",
+      "type": "Point",
+      "coordinates": [78.0722, 32.2278],
+      "address": "Kaza, Himachal Pradesh 172114, India"
+    },
+    "ratingsAverage": 4.9,
+    "ratingsQuantity": 10,
+    "images": ["tour-8-1.jpg", "tour-8-2.jpg", "tour-8-3.jpg"],
+    "startDates": [
+      "2025-06-25T10:00:00.000Z",
+      "2025-07-20T09:00:00.000Z",
+      "2025-08-15T10:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c2970",
+    "name": "The Spiti Valley Star Gazer",
+    "duration": 9,
+    "maxGroupSize": 8,
+    "difficulty": "medium",
+    "guides": ["5c8a21d02f8fb814b56fa189", "5c8a1f292f8fb814b56fa184"],
+    "price": 60000,
+    "summary": "The most remote and stunningly beautiful places for seeing the night sky",
+    "description": "Journey to the high-altitude desert of Spiti Valley, a land of stark landscapes, ancient monasteries, and unparalleled night skies. Tucked away in the Himalayas, Spiti's remote location and clear weather make it one of the best places in the world for stargazing. Explore ancient Buddhist culture, drive through some of the world's highest motorable passes, and witness the Milky Way in all its glory. This is a tour for those who seek true wilderness and celestial beauty.",
+    "imageCover": "spiti-valley-stargazer-cover.jpg",
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2973",
+        "description": "Key Monastery",
+        "type": "Point",
+        "coordinates": [78.0101, 32.2995],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2972",
+        "description": "Langza Village",
+        "type": "Point",
+        "coordinates": [78.0721, 32.2858],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2971",
+        "description": "Chandratal Lake",
+        "type": "Point",
+        "coordinates": [77.6186, 32.4800],
+        "day": 6
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Gangtok, Sikkim",
+      "type": "Point",
+      "coordinates": [88.6065, 27.3389],
+      "address": "MG Marg, Arithang, Gangtok, Sikkim 737101, India"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 12,
+    "images": ["tour-9-1.jpg", "tour-9-2.jpg", "tour-9-3.jpg"],
+    "startDates": [
+      "2025-10-15T10:00:00.000Z",
+      "2025-11-20T10:00:00.000Z",
+      "2026-04-10T10:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c2974",
+    "name": "The Sikkim Panorama",
+    "duration": 3,
+    "maxGroupSize": 12,
+    "difficulty": "easy",
+    "guides": [
+      "5c8a21f22f8fb814b56fa18a",
+      "5c8a201e2f8fb814b56fa186",
+      "5c8a23412f8fb814b56fa18c"
+    ],
+    "price": 30000,
+    "summary": "Enjoy the stunning mountain views and serene monasteries of Sikkim",
+    "description": "Discover the enchanting beauty of Sikkim, a hidden gem in the Eastern Himalayas. This tour takes you through lush green hills, charming villages, and serene Buddhist monasteries. Enjoy breathtaking panoramic views of Mount Kanchenjunga, the third highest peak in the world. Visit high-altitude lakes, vibrant flower valleys, and immerse yourself in the peaceful and pristine environment of this beautiful state.",
+    "imageCover": "sikkim-panorama-cover.jpg",
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c2975",
+        "description": "Tsomgo Lake",
+        "type": "Point",
+        "coordinates": [88.7622, 27.3747],
+        "day": 1
+      }
+    ]
+  },
+  {
+    "startLocation": {
+      "description": "Nashik, Maharashtra",
+      "type": "Point",
+      "coordinates": [73.7898, 19.9975],
+      "address": "Sula Vineyards, Govardhan Village, Off, Gangapur-Savargaon Rd, Nashik, Maharashtra 422222, India"
+    },
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 12,
+    "images": ["tour-7-1.jpg", "tour-7-2.jpg", "tour-7-3.jpg"],
+    "startDates": [
+      "2026-01-20T10:00:00.000Z",
+      "2026-03-15T09:00:00.000Z",
+      "2026-11-05T09:00:00.000Z"
+    ],
+    "_id": "5c88fa8cf4afda39709c296c",
+    "name": "The Nashik Wine Taster",
+    "duration": 5,
+    "maxGroupSize": 8,
+    "difficulty": "easy",
+    "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a23412f8fb814b56fa18c"],
+    "price": 38000,
+    "summary": "Exquisite wines, scenic views, exclusive barrel tastings, and much more",
+    "description": "Indulge your senses in the wine capital of India, Nashik. This tour offers a delightful journey through lush vineyards and state-of-the-art wineries. Enjoy guided wine tasting sessions, learn about the art of winemaking, and savor delicious food pairings. With scenic views of rolling hills and a relaxing ambiance, this tour is a perfect getaway for wine connoisseurs and those looking for a unique and sophisticated experience.",
+    "imageCover": "nashik-wine-taster-cover.jpg",
+    "locations": [
+      {
+        "_id": "5c88fa8cf4afda39709c296f",
+        "description": "Sula Vineyards",
+        "type": "Point",
+        "coordinates": [73.7088, 20.0076],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296e",
+        "description": "York Winery & Tasting Room",
+        "type": "Point",
+        "coordinates": [73.7144, 20.0092],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c296d",
+        "description": "Soma Vine Village",
+        "type": "Point",
+        "coordinates": [73.6925, 20.0051],
+        "day": 5
+      }
+    ]
+  }
+]
