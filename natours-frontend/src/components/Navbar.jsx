@@ -39,6 +39,22 @@ const Navbar = () => {
           className="bg-transparent border-none outline-none text-white placeholder-gray-400 w-full text-sm"
         />
       </div>
+      /////// NAV LINKS ///////
+      
+      <Link
+      className="flex items-center gap-2 text-green-400 font-bold hover:text-green-300 transition-all transform hover:scale-105 ml-4"
+
+      to="/tours">All Tours</Link>
+
+        {/* 👇 YE WALA LINK ADD KARO */}
+        <Link 
+          to="/ai-planner" 
+          className="flex items-center gap-2 text-green-400 font-bold hover:text-green-300 transition-all transform hover:scale-105 ml-4"
+        >
+          ✨ AI Planner
+        </Link>
+
+        {/* 👆 YAHAN TAK */}
 
       {/* NAVIGATION / USER */}
       <div className="flex items-center gap-6">

@@ -24,6 +24,10 @@ const userSchema = new mongoose.Schema({
     enum: ["user", "guide", "lead-guide", "admin"],
     default: 'user'
   },
+  points: {
+    type: Number,
+    default: 50 // Starting points for new users
+  },
   password: {
     type: String,
     required: [true, 'Password Required'], // 1. Fix: 'require' -> 'required'

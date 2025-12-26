@@ -1,8 +1,8 @@
 import { Toaster } from 'react-hot-toast';
-import { useEffect } from "react"; // 👈 useEffect import kiya
+import { useEffect } from "react"; 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useDispatch } from "react-redux"; // 👈 useDispatch import kiya
-import { loadUser } from "./features/authentication/authSlice"; // 👈 loadUser import kiya
+import { useDispatch } from "react-redux"; 
+import { loadUser } from "./features/authentication/authSlice"; 
 
 import MainLayout from "./components/MainLayout";
 import Home from "./pages/Home";
@@ -14,18 +14,18 @@ import Account from "./pages/Account";
 import AdminDashboard from "./pages/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PaymentSuccess from "./pages/PaymentSuccess";
-
+import AIChatBot from "./components/AIChatBot"; // ✅ Imported
+import AIGuide from "./pages/AIGuide";
 function App() {
   const dispatch = useDispatch();
 
-  
   useEffect(() => {
     dispatch(loadUser());
   }, [dispatch]);
 
   return (
     <BrowserRouter>
-    <Toaster 
+      <Toaster 
         position="top-center"
         toastOptions={{
           duration: 3000,
@@ -37,26 +37,26 @@ function App() {
           },
           success: {
             iconTheme: {
-              primary: '#10B981', // Green
+              primary: '#10B981', 
               secondary: 'white',
             },
           },
           error: {
             iconTheme: {
-              primary: '#EF4444', // Red
+              primary: '#EF4444', 
               secondary: 'white',
             },
           },
         }}
       />
+      
       <Routes>
-        
         {/* GROUP 1: WITH NAVBAR */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/tours" element={<AllTours />} />
           <Route path="/tour/:slug" element={<TourDetails />} />
-          
+          <Route path="/ai-planner" element={<AIGuide />} />  
           <Route 
             path="/me" 
             element={
@@ -80,8 +80,12 @@ function App() {
             </ProtectedRoute>
           } 
         />
-        
       </Routes>
+
+      {/* 👇 YAHAN ADD KIYA HAI AI CHATBOT KO */}
+      {/* Ye sabse neeche rahega taaki har page ke upar float kare */}
+      <AIChatBot />
+
     </BrowserRouter>
   );
 }

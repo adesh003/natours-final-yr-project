@@ -4,19 +4,23 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTour } from "../features/tours/tourSlice";
 import api from "../services/api"; // Axios instance
 import ReviewsSection from "../components/ReviewsSection";
+import TourMap from "../components/TourMap";
+import TourWeather from "../components/TourWeather";
 import { 
   Clock, MapPin, User, Calendar, Star, ArrowLeft, 
-  TrendingUp, CheckCircle, Map as MapIcon, CreditCard 
+  TrendingUp, CheckCircle, Map as MapIcon, CreditCard,
+  Glasses 
 } from "lucide-react";
-
-// ❌ Removed: import { loadStripe }... (Not needed anymore)
-// ❌ Removed: const stripePromise... (Not needed anymore)
+import EcoStats from "../components/EcoStats";
+import Tour360 from "../components/Tour360"; 
 
 const TourDetails = () => {
   const { slug } = useParams();
   const dispatch = useDispatch();
   const { tour, isLoading, error } = useSelector((state) => state.tours);
+  
   const [isBooking, setIsBooking] = useState(false);
+  const [show360, setShow360] = useState(false); 
 
   useEffect(() => {
     dispatch(getTour(slug));
@@ -91,6 +95,17 @@ const TourDetails = () => {
                 <span className="flex items-center gap-2"><Clock size={20} className="text-green-500"/> {tour.duration} Days</span>
                 <span className="flex items-center gap-2"><MapPin size={20} className="text-green-500"/> {tour.startLocation?.description}</span>
              </div>
+
+             {/* 👇 ADDED: 360 VR BUTTON */}
+             <button 
+                onClick={() => setShow360(true)}
+                className="mt-6 flex items-center gap-2 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white px-6 py-3 rounded-full font-bold transition-all hover:scale-105 border border-white/30 shadow-lg group"
+              >
+                <Glasses className="group-hover:rotate-12 transition-transform" />
+                View in 360° VR
+             </button>
+             {/* 👆 ADDED END */}
+
          </div>
       </div>
 
@@ -108,24 +123,24 @@ const TourDetails = () => {
              <h2 className="text-3xl font-bold mb-6 text-green-400">About {tour.name}</h2>
              <p className="text-gray-400 text-lg leading-relaxed whitespace-pre-line">{tour.description}</p>
            </div>
-           
+           {tour.startLocation && <TourWeather location={tour.startLocation} />}
            {/* Guides */}
            <div>
               <h3 className="text-2xl font-bold mb-6">Your Tour Guides</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {tour.guides?.map(guide => (
                   <div key={guide._id} className="flex items-center gap-4 bg-[#111] p-4 rounded-xl border border-white/5">
-                     <img 
-                       src={`http://localhost:5000/img/users/${guide.photo}`} 
-                       onError={(e)=>{e.target.src="http://localhost:5000/img/users/default.jpg"}}
-                       alt={guide.name} 
-                       className="w-12 h-12 rounded-full object-cover border-2 border-green-500" 
-                     />
-                     <div>
-                        <p className="font-bold text-white">{guide.name}</p>
-                        <p className="text-xs text-gray-400 uppercase">{guide.role === 'lead-guide' ? 'Lead Guide' : 'Tour Guide'}</p>
-                     </div>
-                  </div>
+                      <img 
+                        src={`http://localhost:5000/img/users/${guide.photo}`} 
+                        onError={(e)=>{e.target.src="http://localhost:5000/img/users/default.jpg"}}
+                        alt={guide.name} 
+                        className="w-12 h-12 rounded-full object-cover border-2 border-green-500" 
+                      />
+                      <div>
+                         <p className="font-bold text-white">{guide.name}</p>
+                         <p className="text-xs text-gray-400 uppercase">{guide.role === 'lead-guide' ? 'Lead Guide' : 'Tour Guide'}</p>
+                      </div>
+                   </div>
                 ))}
               </div>
            </div>
@@ -162,6 +177,9 @@ const TourDetails = () => {
               <p className="text-center text-xs text-gray-500 mt-4">
                  100% Money back guarantee if cancelled 7 days prior.
               </p>
+              <div className="sticky top-[550px]"> {/* Thoda neeche stick karega */}
+      <EcoStats duration={tour.duration} />
+   </div>
            </div>
         </div>
 
@@ -179,9 +197,18 @@ const TourDetails = () => {
                </div>
             ))}
          </div>
+         <div className="max-w-7xl mx-auto px-6 mt-20">
+         <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 text-white">
+           <MapIcon className="text-green-500"/> Tour Locations
+         </h2>
+         <TourMap locations={tour.locations} />
+      </div>
          <ReviewsSection tourId={tour._id} />
       </div>
 
+      {/* 👇 ADDED: 360 MODAL RENDER (Conditional) */}
+      {show360 && <Tour360 onClose={() => setShow360(false)} />}
+      
     </div>
   );
 };

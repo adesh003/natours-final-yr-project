@@ -79,7 +79,7 @@ const catchAsync = require('../utils/catchAsync');
 const factory = require('./../controllers/handlerFactory');
 const User = require('./../models/userModel');
 
-
+const Email = require('../utils/email');
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   // 1) Get currently booked tour
   const tour = await Tour.findById(req.params.tourId);
@@ -89,7 +89,8 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     // success_url: `${req.protocol}://${req.get('host')}/api/v1/bookings/checkout-success?tour=${req.params.tourId}&user=${req.user.id}&price=${tour.price}`,
-    success_url: `${req.protocol}://localhost:5173/payment-success?alert=booking`,
+    // success_url: `${req.protocol}://localhost:5173/payment-success?alert=booking`,
+    success_url: `${req.protocol}://localhost:5173/payment-success?tour=${tour.id}&user=${req.user.id}&price=${tour.price}`,
     cancel_url: `http://localhost:5173/tour/${tour.slug}`, // Cancel hone par Frontend tour page par wapas
     customer_email: req.user.email,
     client_reference_id: req.params.tourId,
@@ -233,3 +234,59 @@ exports.getBooking = factory.getOne(Booking);
 exports.getAllBookings = factory.getAll(Booking);
 exports.updateBooking = factory.updateOne(Booking);
 exports.deleteBooking = factory.deleteOne(Booking);
+
+exports.createBookingFromFrontend = async (req, res, next) => {
+  const { tour, user, price } = req.body;
+
+  console.log("👉 1. Backend hit hua! Data mila:", { tour, user, price }); // LOG 1
+
+  if (!tour || !user || !price) {
+    console.log("❌ Data missing hai!");
+    return next(new AppError('Booking data missing!', 400));
+  }
+
+  // 1. Booking Create
+  await Booking.create({ tour, user, price });
+  console.log("👉 2. Booking DB mein save ho gayi!"); // LOG 2
+
+  // 2. User & Tour Dhoondo
+  const userDoc = await User.findById(user);
+  const tourDoc = await Tour.findById(tour);
+  console.log("👉 3. User aur Tour mil gaye:", userDoc?.email, tourDoc?.name); // LOG 3
+
+  // 3. Email Bhejo
+  try {
+    const url = `${req.protocol}://localhost:5173/me`;
+    console.log("👉 4. Email bhejne ki koshish..."); // LOG 4
+    
+    await new Email(userDoc, url).sendBookingConfirm(tourDoc.name, price);
+    
+    console.log("✅ 5. Email SENT Successfully!"); // LOG 5
+  } catch (err) {
+    console.log("❌ EMAIL ERROR:", err); // Agar yahan error aaya toh dikh jayega
+  }
+
+  res.status(201).json({
+    status: 'success',
+    data: { message: 'Booking created and Email sent!' }
+  });
+};
+
+exports.getTourStats = async (req, res, next) => {
+  // 1. Tour ID URL se lo
+  const tourId = req.params.tourId;
+
+  // 2. Us Tour ki saari bookings dhoondo
+  const bookings = await Booking.find({ tour: tourId }).populate({
+    path: 'user',
+    select: 'name photo' // Sirf Name aur Photo chahiye (Privacy)
+  });
+
+  // 3. Sirf Users ki list nikalo
+  const travelers = bookings.map(b => b.user);
+
+  res.status(200).json({
+    status: 'success',
+    data: { travelers }
+  });
+};
