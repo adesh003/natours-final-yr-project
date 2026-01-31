@@ -95,6 +95,14 @@ useEffect(() => {
               />
             </div>
           </div>
+          <div className="flex justify-end mt-2 mb-6">
+  <Link 
+    to="/forgot-password" 
+    className="text-xs font-bold text-green-500 hover:text-green-400 hover:underline transition"
+  >
+    Forgot Password?
+  </Link>
+</div>
 
           <button 
             type="submit" 
