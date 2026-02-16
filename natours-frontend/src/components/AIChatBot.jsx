@@ -9,7 +9,7 @@ const AIChatBot = () => {
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  
+
   // Auto-scroll to bottom
   const messagesEndRef = useRef(null);
   const scrollToBottom = () => {
@@ -30,7 +30,7 @@ const AIChatBot = () => {
     try {
       // 2. Backend ko call karo
       const res = await api.post("/ai/chat", { prompt: input });
-      
+
       // 3. AI response add karo
       const aiMessage = { text: res.data.message, sender: "ai" };
       setMessages((prev) => [...prev, aiMessage]);
@@ -44,11 +44,11 @@ const AIChatBot = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 font-sans">
-      
+
       {/* CHAT WINDOW */}
       {isOpen && (
         <div className="bg-[#111] border border-white/10 w-80 md:w-96 h-[500px] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-fade-in-up mb-4">
-          
+
           {/* Header */}
           <div className="bg-green-500 p-4 flex justify-between items-center">
             <div className="flex items-center gap-2">
@@ -64,12 +64,11 @@ const AIChatBot = () => {
           <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-gray-700">
             {messages.map((msg, index) => (
               <div key={index} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
-                <div 
-                  className={`max-w-[80%] p-3 rounded-2xl text-sm ${
-                    msg.sender === "user" 
-                      ? "bg-green-500 text-black rounded-tr-none" 
+                <div
+                  className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.sender === "user"
+                      ? "bg-green-500 text-black rounded-tr-none"
                       : "bg-gray-800 text-white rounded-tl-none"
-                  }`}
+                    }`}
                 >
                   {msg.text}
                 </div>
@@ -94,8 +93,8 @@ const AIChatBot = () => {
               placeholder="Suggest a cheap tour..."
               className="flex-1 bg-[#222] text-white px-4 py-2 rounded-full text-sm focus:outline-none focus:ring-1 focus:ring-green-500"
             />
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               disabled={loading}
               className="bg-green-500 hover:bg-green-400 text-black p-2 rounded-full transition disabled:opacity-50"
             >
@@ -107,7 +106,7 @@ const AIChatBot = () => {
 
       {/* FLOATING BUTTON (FAB) */}
       {!isOpen && (
-        <button 
+        <button
           onClick={() => setIsOpen(true)}
           className="bg-green-500 hover:bg-green-400 text-black p-4 rounded-full shadow-[0_0_20px_rgba(85,197,122,0.6)] transition-all hover:scale-110 flex items-center gap-2 font-bold"
         >

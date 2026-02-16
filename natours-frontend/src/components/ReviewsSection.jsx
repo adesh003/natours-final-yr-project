@@ -157,10 +157,7 @@ const ReviewsSection = ({ tourId }) => {
 
   // 1. Check karo ki User ne ye Tour Book kiya hai ya nahi
   // (Admin ko hamesha true milega)
-  const hasBooked = user && (
-    user.role === 'admin' || 
-    bookings?.some(booking => booking.tour._id === tourId || booking.tour.id === tourId)
-  );
+  const hasBooked = user && (user.role === 'admin' || bookings?.some(booking => booking?.tour?._id === tourId))
 
   useEffect(() => {
     // Agar bookings load nahi hain toh fetch kar lo

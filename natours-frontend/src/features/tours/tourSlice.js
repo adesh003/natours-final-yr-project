@@ -61,7 +61,7 @@ const tourSlice = createSlice({
   name: 'tours',
   initialState: {
     tours: [],
-    tour: null, // Container for the single tour
+    tour: null, 
     isLoading: false,
     error: null,
   },

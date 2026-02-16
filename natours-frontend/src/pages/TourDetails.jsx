@@ -706,7 +706,7 @@ const TourDetails = () => {
                 <div className="flex flex-col gap-1 mb-6 border-b border-white/10 pb-6">
                     <p className="text-gray-400 text-sm font-medium">Total Price per person</p>
                     <div className="flex items-end gap-2">
-                        <p className="text-4xl font-black text-white">${tour.price}</p>
+                        <p className="text-4xl font-black text-white">₹{tour.price}</p>
                         <span className="text-green-500 text-sm font-bold mb-2">Best Price</span>
                     </div>
                 </div>

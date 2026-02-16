@@ -129,8 +129,8 @@ const AllTours = () => {
               railStyle={{ backgroundColor: '#333' }}
             />
             <div className="flex justify-between mt-3 text-sm font-bold text-gray-300">
-              <span>${priceRange[0]}</span>
-              <span>${priceRange[1]}</span>
+              <span>₹{priceRange[0]}</span>
+              <span>₹{priceRange[1]}</span>
             </div>
           </div>
 
@@ -240,7 +240,7 @@ const AllTours = () => {
                            <div className="border-t border-white/10 pt-6 flex items-center justify-between mt-auto">
                               <div>
                                 <p className="text-xs text-gray-500">Starting from</p>
-                                <p className="text-xl font-bold text-white">${tour.price}</p>
+                                <p className="text-xl font-bold text-white">₹{tour.price}</p>
                               </div>
                               <Link 
                                 to={`/tour/${tour.slug}`}

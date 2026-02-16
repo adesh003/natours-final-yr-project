@@ -133,7 +133,7 @@ const ManageBookings = () => {
                       {/* Price */}
                       <td className="p-6">
                          <span className="text-green-400 font-black bg-green-500/10 px-3 py-1 rounded-lg">
-                            ${booking.price}
+                            ₹{booking.price}
                          </span>
                       </td>
 

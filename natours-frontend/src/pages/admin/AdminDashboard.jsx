@@ -175,7 +175,8 @@ const AdminDashboard = () => {
 
          {/* 1. STATS CARDS (Updated Design) */}
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-            <StatCard title="Total Revenue" value={`$${(stats?.revenue || 0).toLocaleString()}`} icon={DollarSign} trend="+12.5%" color="text-green-400" bg="bg-green-500/10" border="border-green-500/20" />
+            <StatCard title="Total Revenue" value={`₹
+${(stats?.revenue || 0).toLocaleString()}`} icon={DollarSign} trend="+12.5%" color="text-green-400" bg="bg-green-500/10" border="border-green-500/20" />
             <StatCard title="Total Bookings" value={stats?.bookings || 0} icon={Calendar} trend="+4.3%" color="text-blue-400" bg="bg-blue-500/10" border="border-blue-500/20" />
             <StatCard title="Active Users" value={stats?.users || 0} icon={Users} trend="+8.1%" color="text-purple-400" bg="bg-purple-500/10" border="border-purple-500/20" />
             <StatCard title="Tours Active" value={stats?.tours || 0} icon={Map} trend="Stable" color="text-orange-400" bg="bg-orange-500/10" border="border-orange-500/20" />
@@ -208,7 +209,7 @@ const AdminDashboard = () => {
                             cursor={{fill: '#ffffff05'}}
                          />
                          <Legend />
-                         <Bar yAxisId="left" dataKey="revenue" name="Revenue ($)" fill="#10B981" radius={[4, 4, 0, 0]} />
+                         <Bar yAxisId="left" dataKey="revenue" name="Revenue (₹)" fill="#10B981" radius={[4, 4, 0, 0]} />
                          <Bar yAxisId="right" dataKey="numTourStarts" name="Bookings" fill="#3B82F6" radius={[4, 4, 0, 0]} />
                       </BarChart>
                    </ResponsiveContainer>
@@ -295,7 +296,7 @@ const AdminDashboard = () => {
                                 </td>
                                 <td className="py-4">{booking.tour}</td>
                                 <td className="py-4 text-gray-500">{booking.date}</td>
-                                <td className="py-4 font-bold text-white">${booking.price}</td>
+                                <td className="py-4 font-bold text-white">₹{booking.price}</td>
                                 <td className="py-4 text-right">
                                     <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase ${
                                         booking.status === 'Success' ? 'bg-green-500/10 text-green-500' :

@@ -39,7 +39,7 @@ export const createReview = createAsyncThunk(
       
       // 2. Backend se jo data aaya hai usme 'user' sirf ID hai.
       // Hum usse overwrite karke poora 'user' object (photo ke saath) laga denge.
-      const newReviewData = response.data.data.data;
+      const newReviewData = response?.data?.data?.data;
       
       return { ...newReviewData, user: user }; 
       

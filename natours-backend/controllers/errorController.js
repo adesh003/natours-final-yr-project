@@ -115,7 +115,7 @@ module.exports = (err, req, res, next) => {
     // error.message=err.message
 
     let error = JSON.parse(JSON.stringify(err));
-error.message = err.message; // still needed
+    error.message = err.message; // still needed
 
 
     if (error.name === 'CastError') error = handleCastErrorDB(error);

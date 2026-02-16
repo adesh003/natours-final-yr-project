@@ -372,7 +372,7 @@ const BillingTab = () => {
                     {tour.name}
                   </td>
                   <td className="py-4 font-bold text-green-400">
-                    ${tour.price}
+                    ₹{tour.price}
                   </td>
                   <td className="py-4">
                     <span className="bg-green-500/20 text-green-500 px-2 py-1 rounded text-xs font-bold uppercase">
