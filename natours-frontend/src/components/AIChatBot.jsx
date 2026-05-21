@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Bot, User } from "lucide-react";
 import api from "../services/api"; // Apni API file import karo
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const AIChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,10 +69,16 @@ const AIChatBot = () => {
                 <div
                   className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.sender === "user"
                       ? "bg-green-500 text-black rounded-tr-none"
-                      : "bg-gray-800 text-white rounded-tl-none"
+                      : "bg-gray-800 text-white rounded-tl-none prose prose-invert prose-sm prose-p:my-1 prose-ul:my-1 prose-li:my-0"
                     }`}
                 >
-                  {msg.text}
+                  {msg.sender === "ai" ? (
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {msg.text}
+                    </ReactMarkdown>
+                  ) : (
+                    msg.text
+                  )}
                 </div>
               </div>
             ))}

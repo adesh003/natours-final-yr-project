@@ -11,7 +11,7 @@ const TourWeather = ({ location }) => {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        // 👇 FREE API (No Key Needed)
+        
         const res = await fetch(
           `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current_weather=true`
         );
